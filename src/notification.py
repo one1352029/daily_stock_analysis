@@ -2589,18 +2589,6 @@ class NotificationService(
         email_send_to_all: bool,
         route_type: Optional[str] = None,
     ) -> bool:
-        import zhconv
-        content = zhconv.convert(content, 'zh-tw')
-
-        tw_terms = {
-         "納斯達克": "那斯達克",
-         "道瓊斯": "道瓊",
-         "英偉達": "輝達",
-         "降級兜底": "降級備援",
-         "籌碼分布未啟用": "籌碼分布未啟用",
-        }
-        for cn_term, tw_term in tw_terms.items():
-            content = content.replace(cn_term, tw_term)
         use_image = self._should_use_image_for_channel(channel, image_bytes)
         sanitized_content = strip_hidden_markdown_metadata(content).strip()
         if channel == NotificationChannel.WECHAT:
