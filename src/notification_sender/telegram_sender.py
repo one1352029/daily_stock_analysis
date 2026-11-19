@@ -63,6 +63,18 @@ class TelegramSender:
         Returns:
             是否发送成功
         """
+        import zhconv
+        content = zhconv.convert(content, 'zh-tw')
+
+        tw_terms = {
+         "納斯達克": "那斯達克",
+         "道瓊斯": "道瓊",
+         "英偉達": "輝達",
+         "降級兜底": "降級備援",
+         "籌碼分布未啟用": "籌碼分布未啟用",
+        }
+        for cn_term, tw_term in tw_terms.items():
+            content = content.replace(cn_term, tw_term)
         target_chat_id = chat_id if chat_id is not None else self._telegram_config.get("chat_id")
         target_message_thread_id = (
             message_thread_id
