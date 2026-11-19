@@ -2597,7 +2597,7 @@ class NotificationService(
          "道瓊斯": "道瓊",
          "英偉達": "輝達",
          "降級兜底": "降級備援",
-         "籌碼分部為啟用": "籌碼分布未啟用",
+         "籌碼分布未啟用": "籌碼分布未啟用",
         }
         for cn_term, tw_term in tw_terms.items():
             content = content.replace(cn_term, tw_term)
