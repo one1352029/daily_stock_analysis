@@ -2590,7 +2590,7 @@ class NotificationService(
         route_type: Optional[str] = None,
     ) -> bool:
        import zhconv
-     content = zhconv.convert(content, 'zh-tw')
+       content = zhconv.convert(content, 'zh-tw')
 
      tw_terms = {
          "納斯達克": "那斯達克",
