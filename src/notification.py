@@ -2598,9 +2598,9 @@ class NotificationService(
          "英偉達": "輝達",
          "降級兜底": "降級備援",
          "籌碼分部為啟用": "籌碼分布未啟用",
-     }
-     for cn_term, tw_term in tw_terms.items():
-         content = content.replace(cn_term, tw_term)
+        }
+        for cn_term, tw_term in tw_terms.items():
+            content = content.replace(cn_term, tw_term)
         use_image = self._should_use_image_for_channel(channel, image_bytes)
         sanitized_content = strip_hidden_markdown_metadata(content).strip()
         if channel == NotificationChannel.WECHAT:
