@@ -2592,7 +2592,7 @@ class NotificationService(
        import zhconv
        content = zhconv.convert(content, 'zh-tw')
 
-     tw_terms = {
+       tw_terms = {
          "納斯達克": "那斯達克",
          "道瓊斯": "道瓊",
          "英偉達": "輝達",
