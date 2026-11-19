@@ -2589,10 +2589,10 @@ class NotificationService(
         email_send_to_all: bool,
         route_type: Optional[str] = None,
     ) -> bool:
-       import zhconv
-       content = zhconv.convert(content, 'zh-tw')
+        import zhconv
+        content = zhconv.convert(content, 'zh-tw')
 
-       tw_terms = {
+        tw_terms = {
          "納斯達克": "那斯達克",
          "道瓊斯": "道瓊",
          "英偉達": "輝達",
